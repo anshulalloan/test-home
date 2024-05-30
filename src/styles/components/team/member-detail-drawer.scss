@@ -1,0 +1,74 @@
+.member-detail-drawer {
+  position: relative;
+  .close-icon {
+    position: absolute;
+    // z-index: 1000;
+    top: -50px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    @include flexRow(center, center);
+    cursor: pointer;
+    color: #fff;
+  }
+  .MuiDrawer-content {
+    overflow: visible;
+    height: 90%;
+    border-radius: 12px 12px 0px 0px;
+    background: #111;
+    .member-detail-container {
+      width: 100%;
+      padding: 60px 10%;
+      height: 100%;
+      overflow-y: auto;
+      @include flexCol(flex-start, flex-start, 24px);
+      h3 {
+        color: #ebf3fd;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 48px; /* 150% */
+        text-transform: capitalize;
+      }
+      .role {
+        margin-top: -24px;
+        color: #ccd6e2;
+        font-family: var(--font-open-sans);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px; /* 160% */
+      }
+      .description-container {
+        @include flexCol(flex-start, flex-start, 16px);
+        opacity: 0.8;
+        color: #c2cad4;
+        font-family: var(--font-open-sans);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+      }
+      .socials {
+        @include flexRow(center, flex-start, 16px);
+        a {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background: #1e1f21;
+          @include flexRow(center, center);
+          cursor: pointer;
+          text-decoration: none;
+          svg {
+            width: 20px;
+            height: 20px;
+            fill: #fff;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+.our-team-page {
+  margin-top: 120px;
+  width: 100%;
+  height: 100vh;
+  flex: 1;
+  padding: 60px 120px;
+  @media (max-width: 800px) {
+    margin-top: 36px;
+    padding: 60px 24px;
+  }
+  .our-team-page__content {
+    width: 100%;
+    margin-bottom: 160px;
+    @media (max-width: 800px) {
+      margin-bottom: 24px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+    @include flexRow(flex-start, space-between, 60px);
+    h2 {
+      background: linear-gradient(91deg, #ff1cf7 2.26%, #00f0ff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: var(--font-montserrat);
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: -1.12px;
+      flex: 1;
+      white-space: nowrap;
+    }
+
+    .member-cards-containers {
+      @include flexRow(flex-start, flex-end, 35px);
+      flex-wrap: wrap;
+      @media (max-width: 800px) {
+        @include flexCol(center, flex-start, 35px);
+      }
+      .member-card {
+        border-radius: 8px;
+        background: #fff;
+        width: 320px;
+        overflow: hidden;
+        @include flexCol(flex-start, flex-start, 0);
+        .info {
+          padding: 16px;
+          h3 {
+            color: #282828;
+            font-feature-settings: "clig" off, "liga" off;
+            font-family: var(--font-montserrat);
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 26px; /* 144.444% */
+          }
+          .role {
+            color: #3e3e59;
+            font-feature-settings: "clig" off, "liga" off;
+            font-family: "Open Sans", sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px; /* 157.143% */
+          }
+          .description {
+            margin-top: 10px;
+            color: #5f6980;
+            font-feature-settings: "clig" off, "liga" off;
+            font-family: "Open Sans", sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px; /* 157.143% */
+            letter-spacing: -0.28px;
+            cursor: pointer;
+            > span {
+              overflow: hidden;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 4;
+              color: #25aae5;
+              font-feature-settings: "clig" off, "liga" off;
+              text-overflow: ellipsis;
+              font-family: var(--font-open-sans);
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 22px;
+              cursor: pointer;
+            }
+          }
+        }
+        .socials {
+          @include flexRow(center, flex-start, 16px);
+          padding: 16px;
+          a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #f2f4f7;
+            @include flexRow(center, center);
+            text-decoration: none;
+            color: #000;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1200px) {
+      padding: 60px 60px;
+      @include flexCol(center, flex-start, 60px);
+    }
+  }
+}

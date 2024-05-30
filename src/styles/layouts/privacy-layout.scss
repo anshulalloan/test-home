@@ -1,0 +1,6 @@
+.privacy-layout {
+  background-color: #111;
+  width: 100%;
+  min-height: 100vh;
+  @include flexCol(center, space-between);
+}
